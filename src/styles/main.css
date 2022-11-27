@@ -3,8 +3,17 @@
 @import url(./formations.css);
 @import url(./experiences.css);
 @import url(./contacts.css);
+@import url(./medias.css);
 
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap");
+
+html {
+	scroll-behavior: smooth;
+}
+
+section {
+	scroll-margin-top: 10px;
+}
 
 :root {
 	--black: #232e35;
@@ -62,6 +71,7 @@ ul li {
 a {
 	text-decoration: none;
 	color: var(--black);
+	white-space: nowrap;
 }
 
 a:hover {
