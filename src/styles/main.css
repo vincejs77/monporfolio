@@ -1,0 +1,105 @@
+@import url(./banner.css);
+@import url(./competences.css);
+
+:root {
+	--black: #232e35;
+	--primary: #7e74f1;
+	--primary-l: #f5f3fe;
+	--gray: #656d72;
+	--white: #ffffff;
+}
+
+* {
+	box-sizing: border-box;
+	padding: 0px;
+	margin: 0px;
+}
+
+body {
+	color: var(--gray);
+	position: relative;
+	font-size: 14px;
+	font-family: sans-serif;
+	line-height: 1.5;
+}
+
+section {
+	padding: 20px;
+	display: flex;
+	justify-content: center;
+	justify-items: center;
+}
+
+section .container {
+	max-width: 1000px;
+}
+
+/* NAVBAR */
+.navbar {
+	padding-top: 30px;
+}
+
+.navbar .container {
+	display: flex;
+	justify-items: center;
+	justify-content: space-between;
+	width: 100%;
+}
+
+.navbar .menu ul {
+	display: flex;
+	justify-content: space-between;
+}
+
+ul li {
+	list-style: none;
+}
+a {
+	text-decoration: none;
+	color: var(--black);
+}
+
+a:hover {
+	font-weight: 700;
+	text-decoration: underline;
+	transition: all 300ms;
+}
+
+.menu ul li {
+	margin: 0px 20px;
+}
+
+.navbar .logo span {
+	font-size: 18px;
+	font-weight: bold;
+	color: var(--black);
+}
+
+.navbar .button {
+	display: flex;
+	justify-items: center;
+	justify-content: space-between;
+}
+
+.navbar .button img {
+	width: 40px;
+	height: 40px;
+	margin-top: -12px;
+	margin-right: 20px;
+}
+
+.btn {
+	padding: 10px 24px;
+	font-weight: 700;
+	border-radius: 10px;
+}
+
+.btn.btn-primary {
+	background: var(--primary);
+	color: var(--white);
+}
+
+/* BANNER */
+/* COMPETENCES */
+/* FORMATIONS */
+/* CONTACTS */
