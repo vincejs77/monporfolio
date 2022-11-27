@@ -19,8 +19,17 @@ for (let i = 0; i < competences.length; i++) {
 
 const menuBtn = document.querySelector("#menu-mobile");
 
+document.querySelectorAll(".menu a").forEach((a) => {
+	a.addEventListener("click", function (event) {
+		menu.classList.remove("is-visible");
+		overlay.classList.remove("is-visible");
+	});
+});
+
 const menu = document.querySelector("#menu");
+const overlay = document.querySelector(".overlay");
 
 menuBtn.addEventListener("click", function (event) {
 	menu.classList.toggle("is-visible");
+	overlay.classList.toggle("is-visible");
 });
