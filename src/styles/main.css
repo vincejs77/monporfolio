@@ -1,6 +1,8 @@
 @import url(./banner.css);
 @import url(./competences.css);
 @import url(./formations.css);
+@import url(./experiences.css);
+@import url(./contacts.css);
 
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap");
 
@@ -106,3 +108,33 @@ a:hover {
 /* COMPETENCES */
 /* FORMATIONS */
 /* CONTACTS */
+
+.footer {
+	background: var(--primary-l);
+}
+.footer .container {
+	display: flex;
+	justify-items: center;
+	justify-content: space-between;
+	padding-top: 80px;
+	padding-bottom: 80px;
+	width: 100%;
+}
+
+.footer ul {
+	display: flex;
+	justify-content: center;
+	margin-bottom: 20px;
+}
+
+.footer ul li {
+	margin-left: 40px;
+}
+
+.footer ul li:first-child {
+	margin-left: 0px;
+}
+
+.signature {
+	text-align: center;
+}
