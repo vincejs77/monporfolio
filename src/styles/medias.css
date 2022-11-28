@@ -138,6 +138,24 @@
 		width: 100% !important;
 		margin-top: 0px !important ;
 	}
+	.title h2 {
+		font-size: 24px !important;
+	}
+
+	.title span {
+		font-family: 12px !important;
+	}
+
+	.lang h3 {
+		font-size: 16px !important;
+	}
+	.banner .text h1 {
+		font-size: 32px;
+	}
+
+	.navbar .logo {
+		margin-top: -5px;
+	}
 }
 
 .banner .img img {

@@ -4,14 +4,37 @@
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Vincent Asani - Mon Porfolio</title>
+		<title>Vincent ASANI - Mon Porfolio</title>
 
+		<link rel="apple-touch-icon" sizes="76x76" href="./assets/icons/favicons/apple-touch-icon.png" />
+		<link rel="icon" type="image/png" sizes="32x32" href="./assets/icons/favicons/favicon-32x32.png" />
+		<link rel="icon" type="image/png" sizes="16x16" href="./assets/icons/favicons/favicon-16x16.png" />
+		<link rel="manifest" href="./assets/icons/favicons/site.webmanifest" />
+		<link rel="mask-icon" href="./assets/icons/favicons/safari-pinned-tab.svg" color="#5bbad5" />
+		<meta name="msapplication-TileColor" content="#2b5797" />
+		<meta name="theme-color" content="#ffffff" />
+
+		<meta property="og:image" content="./assets/icons/pic1.png" />
+
+		<meta name="twitter:image" content="./assets/icons/pic1.png" />
+		<meta name="twitter:card" content="summary_large_image" />
 		<link rel="stylesheet" href="./src/styles/main.css" />
 
 		<script src="./src/js/main.js" defer type="module"></script>
+		<style>
+			#scroll-progress {
+				position: fixed;
+				top: 0;
+				width: 0%;
+				height: 6px;
+				background: #7e74f1;
+				z-index: 10000;
+			}
+		</style>
 	</head>
 	<body>
 		<div class="overlay"></div>
+		<div id="scroll-progress"></div>
 		<div class="app">
 			<!-- NAVBAR -->
 			<section class="navbar">
@@ -29,7 +52,7 @@
 					</div>
 					<div style="display: flex">
 						<div class="button">
-							<span> <img src="./assets/icons/mod.svg" alt="" /> </span>
+							<!-- <span> <img src="./assets/icons/mod.svg" alt="" /> </span> -->
 							<span> <a href="#" class="btn btn-primary" alt="Télécharger mon CV">Mon CV</a> </span>
 						</div>
 
@@ -43,7 +66,7 @@
 			</section>
 
 			<!-- BANNER -->
-			<section class="banner" id="banner">
+			<section class="banner animated-on-scroll" id="banner">
 				<div class="container">
 					<div class="text">
 						<span class="subtitle">Bienvenue</span>
@@ -87,11 +110,11 @@
 			<section class="competences" id="competences">
 				<div class="container">
 					<div style="width: 100%">
-						<div class="title">
+						<div class="animated-on-scroll title">
 							<span>Services</span>
 							<h2>Mes compétences</h2>
 						</div>
-						<div class="data-competences"></div>
+						<div class="animated-on-scroll data-competences"></div>
 					</div>
 				</div>
 			</section>
@@ -100,13 +123,13 @@
 			<section class="formations" id="formations">
 				<div class="container">
 					<div style="width: 100%">
-						<div class="title left">
-							<span>Services</span>
+						<div class="animated-on-scroll title left">
+							<span>Formations</span>
 							<h2>Mes formations</h2>
 						</div>
 
 						<div class="data-formations">
-							<div class="timeline-list">
+							<div class="animated-on-scroll timeline-list">
 								<div class="block">
 									<h3>Université Catholique de Bukavu</h3>
 									<p class="">Réseau et Télécommunications</p>
@@ -114,17 +137,17 @@
 								</div>
 								<div class="block">
 									<h3>Kingston university</h3>
-									<p class="">Master's degree - Software Engineering</p>
+									<p class="">Master's degree - Génie Logiciel</p>
 									<span>2019 - 2021</span>
 								</div>
 								<div class="block">
 									<h3>Kingston university</h3>
-									<p class="">Master's degree - Software Engineering</p>
+									<p class="">Master's degree - Génie Logiciel</p>
 									<span>2019 - 2021</span>
 								</div>
 							</div>
-							<div class="skills">
-								<p>For 5+ years, I have been continuously learning in the field of front-end and experimenting with new technologies and frameworks, and here you can see a summary of my skills.</p>
+							<div class="animated-on-scroll skills">
+								<p>Depuis plus de 5 ans, j'apprends continuellement dans le domaine du front-end et j'expérimente de nouvelles technologies et frameworks, et ici vous pouvez voir un résumé de mes compétences.</p>
 								<div class="skills-block">
 									<div class="skill-block">
 										<h3>HTML5 & CSS3</h3>
@@ -150,11 +173,11 @@
 			<section class="experiences" id="experiences">
 				<div class="container">
 					<div style="width: 100%">
-						<div class="title">
+						<div class="animated-on-scroll title">
 							<span>Experiences</span>
 							<h2>Experiences profetionnelle</h2>
 						</div>
-						<div class="text">
+						<div class="animated-on-scroll text">
 							<p>Plus d’infos dans mon CV, téléchargeable sur ce lien directement</p>
 							<p class="button">
 								<span> <a href="#" class="btn btn-primary" alt="Télécharger mon CV">Mon CV</a> </span>
@@ -167,7 +190,7 @@
 			<!-- CONTACTS -->
 			<section class="contacts" id="contacts">
 				<div class="container">
-					<div style="width: 100%">
+					<div class="animated-on-scroll" style="width: 100%">
 						<div class="title left">
 							<span>Langues</span>
 							<h2>Langues parlées</h2>
@@ -185,7 +208,7 @@
 							<h3>Swahili</h3>
 						</div>
 					</div>
-					<div class="contacts-infos">
+					<div class="animated-on-scroll contacts-infos">
 						<div class="contact-infos">
 							<div class="icon">
 								<img src="./assets/icons/Icon-4.svg" alt="" />
@@ -224,7 +247,7 @@
 			<section class="footer">
 				<div class="container">
 					<div style="width: 100%">
-						<footer>
+						<footer class="animated-on-scroll">
 							<div>
 								<ul>
 									<li>
