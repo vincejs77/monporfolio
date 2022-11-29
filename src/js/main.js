@@ -1,24 +1,3 @@
-import competencesJson from "../../data/competences.json" assert { type: "json" };
-
-const competences = competencesJson;
-
-console.log(competences.length);
-
-const competencesDiv = document.querySelector(".data-competences");
-
-for (let i = 0; i < competences.length; i++) {
-	const div = document.createElement("div");
-	div.classList.add("box");
-	div.innerHTML = `
-    <div> <img src="${competences[i].icon}" /> </div>
-	<h3> ${competences[i].title} </h3>
-	<p> ${competences[i].desc} </p>
-    `;
-	competencesDiv.appendChild(div);
-}
-
-const menuBtn = document.querySelector("#menu-mobile");
-
 document.querySelectorAll(".menu a").forEach((a) => {
 	a.addEventListener("click", function (event) {
 		menu.classList.remove("is-visible");
@@ -26,8 +5,11 @@ document.querySelectorAll(".menu a").forEach((a) => {
 	});
 });
 
+const menuBtn = document.querySelector("#menu-mobile");
 const menu = document.querySelector("#menu");
 const overlay = document.querySelector(".overlay");
+
+console.log(menuBtn);
 
 menuBtn.addEventListener("click", function (event) {
 	menu.classList.toggle("is-visible");
@@ -75,3 +57,32 @@ const observer = new IntersectionObserver((entries) => {
 document.querySelectorAll(".animated-on-scroll").forEach((el) => {
 	observer.observe(el);
 });
+
+const getCompetencesAPI = async () => {
+	const res = await fetch("../../data/competences.json");
+	if (res.ok === true) {
+		return res.json();
+	}
+};
+
+getCompetencesAPI()
+	.then((res) => {
+		const competences = res;
+		console.log(competences.length);
+		const competencesDiv = document.querySelector(".data-competences");
+
+		for (let i = 0; i < competences.length; i++) {
+			console.log(competences);
+			const div = document.createElement("div");
+			div.classList.add("box");
+			div.innerHTML = `
+			<div> <img src="${competences[i].icon}" /> </div>
+			<h3> ${competences[i].title} </h3>
+			<p> ${competences[i].desc} </p>
+            `;
+			competencesDiv.appendChild(div);
+		}
+	})
+	.catch((e) => {
+		throw new Error("Données introuvables via le chemin");
+	});
